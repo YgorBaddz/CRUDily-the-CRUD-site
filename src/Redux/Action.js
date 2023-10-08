@@ -9,7 +9,6 @@ import {
   UPDATE_USER,
 } from "./ActionTypes";
 import { toast } from "react-toastify";
-import UpdateUser from "../components/UpdateUser";
 
 export const makeRequest = () => {
   return {

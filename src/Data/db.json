@@ -10,9 +10,9 @@
     {
       "id": 2,
       "name": "Admin User1",
-      "role": "admin",
       "email": "admin@in.com",
-      "phone": "9876543210"
+      "phone": "9876543210",
+      "role": "staff"
     },
     {
       "id": 3,

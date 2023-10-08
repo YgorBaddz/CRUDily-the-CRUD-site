@@ -2,7 +2,6 @@ import { connect } from "react-redux";
 import { FetchUserList, RemoveUser } from "../Redux/Action";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { toast } from "react-toastify";
 
 const UserListing = (props) => {
   useEffect(() => {
