@@ -1,0 +1,15 @@
+{
+  "headers": [
+    {
+      "source": "*/",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain"
+        }
+      ]
+    }
+  ],
+
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+}
