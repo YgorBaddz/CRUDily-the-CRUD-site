@@ -74,7 +74,7 @@ export const RemoveUser = (code) => {
   return (dispatch) => {
     dispatch(makeRequest());
     axios
-      .delete("https://json-server-vercel-omega-seven.vercel.app/user" + code)
+      .delete("https://json-server-vercel-omega-seven.vercel.app/user/" + code)
       .then((res) => {
         dispatch(deleteUser());
         toast.success(
@@ -110,7 +110,7 @@ export const FuncUpdateUser = (data, code) => {
     dispatch(makeRequest());
     axios
       .put(
-        "https://json-server-vercel-omega-seven.vercel.app/user" + code,
+        "https://json-server-vercel-omega-seven.vercel.app/user/" + code,
         data
       )
       .then((res) => {
@@ -127,7 +127,7 @@ export const FetchUserObj = (code) => {
   return (dispatch) => {
     dispatch(makeRequest());
     axios
-      .get("https://json-server-vercel-omega-seven.vercel.app/user" + code)
+      .get("https://json-server-vercel-omega-seven.vercel.app/user/" + code)
       .then((res) => {
         const userList = res.data;
         dispatch(getUserObj(userList));
