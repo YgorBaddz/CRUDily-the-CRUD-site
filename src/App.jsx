@@ -11,12 +11,20 @@ import Store from "./Redux/Store";
 function App() {
   return (
     <Provider store={Store}>
-      <div className="">
+      <>
         <BrowserRouter>
           <div className="header">
-            <Link to={"/"}>Home</Link>
-            <Link to={"/user"}>User</Link>
+            <Link to={"/"}>
+              <h3>
+                <span>CRUD</span>ily
+              </h3>
+            </Link>
+            <div className="navbar">
+              <Link to={"/"}>Home</Link>
+              <Link to={"/user"}>User</Link>
+            </div>
           </div>
+
           <Routes>
             <Route path="/" element={<Home></Home>}></Route>
             <Route path="/user" element={<UserListing></UserListing>}></Route>
@@ -31,7 +39,11 @@ function App() {
           className="toast-position"
           position="bottom-right"
         ></ToastContainer>
-      </div>
+        <div className="footer">
+          <div>©2023 YgorBaddz. All rights reserved.</div>
+          <div></div>
+        </div>
+      </>
     </Provider>
   );
 }

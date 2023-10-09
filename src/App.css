@@ -1,21 +1,47 @@
 .header {
   width: 100%;
-  background-color: blue;
+  background-color: rgb(74, 196, 111);
+  border-radius: 8px;
   color: #fff;
   padding: 1%;
   text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header a span {
+  color: black;
+  transition: 0.2s ease all;
+}
+
+.header a:hover span {
+  color: yellow;
 }
 
 a {
   text-decoration: none !important;
-  color: wheat !important;
+  font-size: 18px;
+  color: yellow !important;
   padding: 2px;
+  transition: 0.7s ease all;
 }
 
 .card-header {
   text-align: right;
 }
 
+.navbar {
+  gap: 15px;
+}
+
+.footer {
+  height: 50px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 /* #root {
   max-width: 1280px;
   margin: 0 auto;
