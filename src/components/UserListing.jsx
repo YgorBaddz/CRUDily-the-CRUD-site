@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 import { FetchUserList, RemoveUser } from "../Redux/Action";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import styles from "./UserListing.module.css";
 
 const UserListing = (props) => {
   useEffect(() => {
@@ -32,46 +33,50 @@ const UserListing = (props) => {
           </Link>
         </div>
         <div className="card-body">
-          <table className="table table-bordered table-dark">
-            <thead className="">
-              <tr>
-                <td>Code</td>
-                <td>Name</td>
-                <td>Email</td>
-                <td>Phone</td>
-                <td>Role</td>
-                <td>Action</td>
-              </tr>
-            </thead>
-            <tbody>
-              {props.user.userList &&
-                props.user.userList.map((item) => (
-                  <tr key={item.id}>
-                    <td>{item.id}</td>
-                    <td>{item.name}</td>
-                    <td>{item.email}</td>
-                    <td>{item.phone}</td>
-                    <td>{item.role}</td>
-                    <td>
-                      <Link
-                        to={"/user/edit/" + item.id}
-                        className="btn btn-primary"
-                      >
-                        Edit
-                      </Link>
-                      <button
-                        onClick={() => {
-                          handleDelete(item.id);
-                        }}
-                        className="btn btn-danger"
-                      >
-                        Delete
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-            </tbody>
-          </table>
+          <div className="table-responsive-sm table-responsive-md">
+            <table className="table table-bordered table-dark ">
+              <thead className="">
+                <tr>
+                  <td>Code</td>
+                  <td>Name</td>
+                  <td>Email</td>
+                  <td>Phone</td>
+                  <td>Role</td>
+                  <td>Action</td>
+                </tr>
+              </thead>
+              <tbody>
+                {props.user.userList &&
+                  props.user.userList.map((item) => (
+                    <tr key={item.id}>
+                      <td>{item.id}</td>
+                      <td>{item.name}</td>
+                      <td>{item.email}</td>
+                      <td>{item.phone}</td>
+                      <td>{item.role}</td>
+                      <td>
+                        <div className={styles.buttons}>
+                          <Link
+                            to={"/user/edit/" + item.id}
+                            className="btn btn-primary"
+                          >
+                            Edit
+                          </Link>
+                          <button
+                            onClick={() => {
+                              handleDelete(item.id);
+                            }}
+                            className="btn btn-danger"
+                          >
+                            Delete
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </>
