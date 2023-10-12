@@ -32,8 +32,8 @@ const UserListing = (props) => {
             Add User [+]
           </Link>
         </div>
-        <div className="card-body">
-          <div className="table-responsive-sm table-responsive-md">
+        <div className="card-body ">
+          <div className="table-responsive-sm table-responsive-md ">
             <table className="table table-bordered table-dark ">
               <thead className="">
                 <tr>

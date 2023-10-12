@@ -24,11 +24,8 @@
   font-size: 18px;
   color: yellow !important;
   padding: 2px;
-  transition: 0.7s ease all;
+  transition: 0.4s ease all;
   font-weight: 600;
-}
-
-.header a {
 }
 
 .card-header {
@@ -37,6 +34,19 @@
 
 .navbar {
   gap: 15px;
+}
+
+.navbar a {
+  background: linear-gradient(0deg, #000, #000) no-repeat right bottom / 0
+    var(--bg-h);
+  transition: background-size 350ms;
+  --bg-h: 100%;
+}
+
+.navbar a:where(:hover, :focus-visible) {
+  background-size: 100% var(--bg-h);
+  background-position-x: left;
+  border-radius: 3px;
 }
 
 .footer {

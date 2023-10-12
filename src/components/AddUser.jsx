@@ -74,7 +74,7 @@ const AddUser = () => {
           <div className="card-footer">
             <button className="btn btn-primary" type="submit">
               Submit
-            </button>
+            </button>{" "}
             <Link className="btn btn-danger" to={"/user"}>
               Back
             </Link>

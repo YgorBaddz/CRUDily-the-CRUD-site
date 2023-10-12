@@ -39,12 +39,26 @@
   font-weight: 300;
 }
 
+.desc span {
+  color: #53c28b;
+  font-weight: 600;
+}
+
+.desc .blur {
+  filter: blur(6px);
+  transition: all ease 0.3s;
+}
+
+.desc .blur:hover {
+  filter: none;
+}
+
 .button {
   padding: 20px;
   cursor: pointer;
   background-color: #53c28b;
-  color: yellow !important;
-  font-weight: 600;
+  color: #000 !important;
+  font-weight: 700;
   border: none;
   border-radius: 5px;
   width: max-content;
@@ -52,6 +66,11 @@
   transition: 0.3s ease all;
   position: relative;
   text-decoration: none;
+}
+
+.button:hover {
+  color: yellow !important;
+  border-radius: 10px;
 }
 
 .button::before {
