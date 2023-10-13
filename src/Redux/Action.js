@@ -59,7 +59,7 @@ export const FetchUserList = () => {
   return (dispatch) => {
     dispatch(makeRequest());
     axios
-      .get("https://json-server-vercel-omega-seven.vercel.app/user")
+      .get("https://json-for-crudily-gz38.vercel.app/user")
       .then((res) => {
         const userList = res.data;
         dispatch(getUserList(userList));
@@ -74,7 +74,7 @@ export const RemoveUser = (code) => {
   return (dispatch) => {
     dispatch(makeRequest());
     axios
-      .delete("https://json-server-vercel-omega-seven.vercel.app/user/" + code)
+      .delete("https://json-for-crudily-gz38.vercel.app/user/" + code)
       .then((res) => {
         dispatch(deleteUser());
         toast.success(
@@ -94,7 +94,7 @@ export const FuncAddUser = (data) => {
   return (dispatch) => {
     dispatch(makeRequest());
     axios
-      .post("https://json-server-vercel-omega-seven.vercel.app/user", data)
+      .post("https://json-for-crudily-gz38.vercel.app/user", data)
       .then((res) => {
         dispatch(addUser());
         toast.success("User added successfully.");
@@ -109,10 +109,7 @@ export const FuncUpdateUser = (data, code) => {
   return (dispatch) => {
     dispatch(makeRequest());
     axios
-      .put(
-        "https://json-server-vercel-omega-seven.vercel.app/user/" + code,
-        data
-      )
+      .put("https://json-for-crudily-gz38.vercel.app/user/" + code, data)
       .then((res) => {
         dispatch(updateUser());
         toast.success("User updated successfully.");
@@ -127,7 +124,7 @@ export const FetchUserObj = (code) => {
   return (dispatch) => {
     dispatch(makeRequest());
     axios
-      .get("https://json-server-vercel-omega-seven.vercel.app/user/" + code)
+      .get("https://json-for-crudily-gz38.vercel.app/user/" + code)
       .then((res) => {
         const userList = res.data;
         dispatch(getUserObj(userList));
