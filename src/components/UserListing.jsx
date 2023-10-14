@@ -33,7 +33,7 @@ const UserListing = (props) => {
           </Link>
         </div>
         <div className="card-body ">
-          <div className="table-responsive-sm table-responsive-md ">
+          <div className="table-responsive-sm table-responsive-md table-responsive-lg">
             <table className="table table-bordered table-dark ">
               <thead className="">
                 <tr>
