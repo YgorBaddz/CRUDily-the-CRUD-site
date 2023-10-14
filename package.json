@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "concurrently \"vite\" \"json-server --host -p 8000 -w  src/db.json\"",
-    "build": "concurrently \"vite build\" \"json-server --host -p 8000 -w  src/db.json\"",
+    "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview --port 8080"
   },
