@@ -59,7 +59,7 @@ export const FetchUserList = () => {
   return (dispatch) => {
     dispatch(makeRequest());
     axios
-      .get("https://jsonplaceholder.typicode.com/users")
+      .get("http://localhost:8000/user")
       .then((res) => {
         const userList = res.data;
         dispatch(getUserList(userList));
@@ -74,10 +74,13 @@ export const RemoveUser = (code) => {
   return (dispatch) => {
     dispatch(makeRequest());
     axios
-      .delete("https://jsonplaceholder.typicode.com/users/" + code)
+      .delete("http://localhost:8000/user/" + code)
       .then((res) => {
         dispatch(deleteUser());
-        toast.success("User removed successfully.");
+        toast.success("User removed successfully, please wait a few seconds.");
+        setTimeout(() => {
+          location.reload();
+        }, 5000);
       })
       .catch((err) => {
         dispatch(failRequest(err.message));
@@ -89,10 +92,13 @@ export const FuncAddUser = (data) => {
   return (dispatch) => {
     dispatch(makeRequest());
     axios
-      .post("https://jsonplaceholder.typicode.com/users", data)
+      .post("http://localhost:8000/user", data)
       .then((res) => {
         dispatch(addUser());
-        toast.success("User added successfully.");
+        toast.success("User added successfully, please wait a few seconds..");
+        setTimeout(() => {
+          location.reload();
+        }, 5000);
       })
       .catch((err) => {
         dispatch(failRequest(err.message));
@@ -104,7 +110,7 @@ export const FuncUpdateUser = (data, code) => {
   return (dispatch) => {
     dispatch(makeRequest());
     axios
-      .put("https://jsonplaceholder.typicode.com/users/" + code, data)
+      .put("http://localhost:8000/user/" + code, data)
       .then((res) => {
         dispatch(updateUser());
         toast.success("User updated successfully.");
@@ -119,7 +125,7 @@ export const FetchUserObj = (code) => {
   return (dispatch) => {
     dispatch(makeRequest());
     axios
-      .get("https://jsonplaceholder.typicode.com/users/" + code)
+      .get("http://localhost:8000/user/" + code)
       .then((res) => {
         const userList = res.data;
         dispatch(getUserObj(userList));

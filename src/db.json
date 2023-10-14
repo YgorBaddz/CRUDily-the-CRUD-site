@@ -1,0 +1,32 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "Michael Wings",
+      "email": "michwii@gmail.com",
+      "phone": "135792",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "name": "Alberto Mandreza",
+      "email": "dragendreza@in.com",
+      "phone": "9876543210",
+      "role": "staff"
+    },
+    {
+      "id": 3,
+      "name": "Anna Quake",
+      "email": "quake222@in.com",
+      "phone": "1608994788",
+      "role": "staff"
+    },
+    {
+      "id": 4,
+      "name": "Hugo Donalds",
+      "email": "hugodonalds@gmail.com",
+      "phone": "9756533210",
+      "role": "staff"
+    }
+  ]
+}
