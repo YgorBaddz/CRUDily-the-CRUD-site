@@ -59,7 +59,7 @@ export const FetchUserList = () => {
   return (dispatch) => {
     dispatch(makeRequest());
     axios
-      .get("http://localhost:8000/user")
+      .get("https://jsonplaceholder.typicode.com/users")
       .then((res) => {
         const userList = res.data;
         dispatch(getUserList(userList));
@@ -74,31 +74,25 @@ export const RemoveUser = (code) => {
   return (dispatch) => {
     dispatch(makeRequest());
     axios
-      .delete("http://localhost:8000/user/" + code)
+      .delete("https://jsonplaceholder.typicode.com/users/" + code)
       .then((res) => {
         dispatch(deleteUser());
-        toast.success("User removed successfully, please wait a few seconds.");
-        setTimeout(() => {
-          location.reload();
-        }, 5000);
+        toast.success("User removed successfully.");
       })
       .catch((err) => {
         dispatch(failRequest(err.message));
       });
   };
 };
-// vite --port $PORT
+
 export const FuncAddUser = (data) => {
   return (dispatch) => {
     dispatch(makeRequest());
     axios
-      .post("http://localhost:8000/user", data)
+      .post("https://jsonplaceholder.typicode.com/users", data)
       .then((res) => {
         dispatch(addUser());
-        toast.success("User added successfully, please wait a few seconds..");
-        setTimeout(() => {
-          location.reload();
-        }, 5000);
+        toast.success("User added successfully.");
       })
       .catch((err) => {
         dispatch(failRequest(err.message));
@@ -110,7 +104,7 @@ export const FuncUpdateUser = (data, code) => {
   return (dispatch) => {
     dispatch(makeRequest());
     axios
-      .put("http://localhost:8000/user/" + code, data)
+      .put("https://jsonplaceholder.typicode.com/users/" + code, data)
       .then((res) => {
         dispatch(updateUser());
         toast.success("User updated successfully.");
@@ -125,7 +119,7 @@ export const FetchUserObj = (code) => {
   return (dispatch) => {
     dispatch(makeRequest());
     axios
-      .get("http://localhost:8000/user/" + code)
+      .get("https://jsonplaceholder.typicode.com/users/" + code)
       .then((res) => {
         const userList = res.data;
         dispatch(getUserObj(userList));
