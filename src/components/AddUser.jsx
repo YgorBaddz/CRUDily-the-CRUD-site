@@ -7,13 +7,12 @@ const AddUser = () => {
   const [name, nameChange] = useState("");
   const [email, emailChange] = useState("");
   const [phone, phoneChange] = useState("");
-  const [role, roleChange] = useState("staff");
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const userObj = { name, email, phone, role };
+    const userObj = { name, email, phone };
     dispatch(FuncAddUser(userObj));
     navigate("/user");
   };

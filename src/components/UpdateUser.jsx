@@ -8,7 +8,6 @@ const UpdateUser = () => {
   const [name, nameChange] = useState("");
   const [email, emailChange] = useState("");
   const [phone, phoneChange] = useState("");
-  const [role, roleChange] = useState("staff");
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { code } = useParams();
@@ -16,7 +15,7 @@ const UpdateUser = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const userObj = { id, name, email, phone, role };
+    const userObj = { id, name, email, phone };
     dispatch(FuncUpdateUser(userObj, id));
     navigate("/user");
   };
@@ -31,7 +30,6 @@ const UpdateUser = () => {
       nameChange(userObj.name);
       emailChange(userObj.email);
       phoneChange(userObj.phone);
-      roleChange(userObj.role);
     }
   }, [userObj]);
   return (
