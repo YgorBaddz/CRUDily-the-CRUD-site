@@ -56,19 +56,6 @@ const AddUser = () => {
                   ></input>
                 </div>
               </div>
-              <div className="col-lg-12">
-                <div className="form-group">
-                  <label>Role</label>
-                  <select
-                    value={role}
-                    onChange={(e) => roleChange(e.target.value)}
-                    className="form-control"
-                  >
-                    <option value="admin">Admin</option>
-                    <option value="staff">Staff</option>
-                  </select>
-                </div>
-              </div>
             </div>
           </div>
           <div className="card-footer">

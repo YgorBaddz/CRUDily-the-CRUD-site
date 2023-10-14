@@ -41,7 +41,6 @@ const UserListing = (props) => {
                   <td>Name</td>
                   <td>Email</td>
                   <td>Phone</td>
-                  <td>Role</td>
                   <td>Action</td>
                 </tr>
               </thead>
@@ -53,7 +52,6 @@ const UserListing = (props) => {
                       <td>{item.name}</td>
                       <td>{item.email}</td>
                       <td>{item.phone}</td>
-                      <td>{item.role}</td>
                       <td>
                         <div className={styles.buttons}>
                           <Link
